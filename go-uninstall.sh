@@ -22,10 +22,20 @@ if [ -f $FILE ]; then
 fi
 
 if [ -d /usr/local/go ]; then
-	echo "Removing directory /usr/local/go"
-    rm -rf /usr/local/go
+	read -p "Remove directory /usr/local/go ? " -n 1 -r
+	if [[ $REPLY =~ ^[Yy]$ ]]; then
+	    echo "Removing directory /usr/local/go"
+    	rm -rf /usr/local/go
+	fi
 fi
 
+if [ -d ~/go ]; then
+	read -p "Remove directory ~/go ? " -n 1 -r
+	if [[ $REPLY =~ ^[Yy]$ ]]; then
+	    echo "Removing directory ~/go"
+    	rm -rf ~/go
+	fi
+fi
 
 echo "I'm not going to touch your home directory, but inside ~/.bashrc these lines:"
 echo "export PATH=$PATH;/usr/local/go/bin"
