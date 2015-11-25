@@ -22,7 +22,7 @@ if [ -f $FILE ]; then
 fi
 
 if [ -d /usr/local/go ]; then
-	read -p "Remove directory /usr/local/go ? " -n 1 -r
+	read -p "Remove directory /usr/local/go ? " -r
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
 	    echo "Removing directory /usr/local/go"
     	rm -rf /usr/local/go
@@ -30,7 +30,7 @@ if [ -d /usr/local/go ]; then
 fi
 
 if [ -d ~/go ]; then
-	read -p "Remove directory ~/go ? " -n 1 -r
+	read -p "Remove directory ~/go ? " -r
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
 	    echo "Removing directory ~/go"
     	rm -rf ~/go
