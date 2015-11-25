@@ -23,7 +23,17 @@ rm $FILE
 
 echo "Making a go path in home directory"
 mkdir ~/go
-echo "Last Steps: You need to copy the below line and add to ~/.bashrc, likely bottom, or append to previous lines"
+
+echo "Running export commands..."
+export PATH=$PATH;/usr/local/go/bin
+export GOPATH=~/go
+
+echo "Adding export options to ~/.bashrc..."
+echo "export PATH=$PATH;/usr/local/go/bin" >> ~/.bashrc
+echo "export GOPATH=~/go" >> ~/.bashrc
+
+echo "If any other users need go path, here is the information to add to /home/<user>/.bashrc:"
 echo "export PATH=$PATH;/usr/local/go/bin"
 echo "export GOPATH=~/go"
 
+echo "Done."
