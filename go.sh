@@ -9,7 +9,7 @@ if [ `uname -m | grep 64 | wc -l` -ge 1 ]; then
 fi
 
 echo "Downloading $FILE"
-curl -O $FILE https://storage.googleapis.com/golang/$FILE
+curl --remote-name https://storage.googleapis.com/golang/$FILE
 if [ ! -f $FILE ]; then
     echo "File failed to download"
     exit
