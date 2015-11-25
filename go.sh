@@ -7,7 +7,7 @@ if [ `uname -m | grep 64 | wc -l` -ge 1 ]; then
 fi
 
 echo "Downloading $FILE"
-wget https://storage.googleapis.com/golang/$FILE
+curl -O $FILE https://storage.googleapis.com/golang/$FILE
 if [ ! -f $FILE ]; then
     echo "File failed to download"
     exit
