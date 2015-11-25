@@ -1,6 +1,5 @@
-#Source: https://golang.org/dl/
 #!/bin/bash
-set -e
+#Source: https://golang.org/dl/
 
 echo "Uninstalling Go..."
 

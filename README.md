@@ -15,5 +15,5 @@ Usage Example
 ---
 
 ```
-	curl -sSL https://raw.githubusercontent.com/Xackery/shell/master/<FILE>.sh | sh
+	curl -sSL https://raw.githubusercontent.com/Xackery/shell/master/<FILE>.sh | bash
 ```

@@ -1,6 +1,6 @@
-#Source: https://golang.org/dl/
 #!/bin/bash
-set -e
+#Source: https://golang.org/dl/
+
 
 echo "Installing Go..."
 if [ -d /usr/local/go ]; then
@@ -31,24 +31,24 @@ if [ ! -f $FILE ]; then
 fi
 
 echo "Extracting $FILE to /usr/local/go..."
-tar -C /usr/local -xzf $FILE
+sudo tar -C /usr/local -xzf $FILE
 
 echo "Removing $FILE"
 rm $FILE
 
 echo "Making a go path in home directory"
-mkdir ~/go
+mkdir -p ~/go
 
 echo "Running export commands..."
-export PATH=$PATH;/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin
 export GOPATH=~/go
 
 echo "Adding export options to ~/.bashrc..."
-echo "export PATH=$PATH;/usr/local/go/bin" >> ~/.bashrc
+echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.bashrc
 echo "export GOPATH=~/go" >> ~/.bashrc
 
 echo "If any other users need go path, here is the information to add to /home/<user>/.bashrc:"
-echo "export PATH=$PATH;/usr/local/go/bin"
+echo "export PATH=$PATH:/usr/local/go/bin"
 echo "export GOPATH=~/go"
 
 echo "Done."
