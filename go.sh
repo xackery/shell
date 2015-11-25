@@ -1,4 +1,6 @@
 #Source: https://golang.org/dl/
+#!/bin/bash
+set -e
 
 echo "Getting Go..."
 FILE="go1.5.1.linux-386.tar.gz..."
